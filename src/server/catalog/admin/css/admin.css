@@ -1,0 +1,250 @@
+:root {
+    --color0: white;
+    --color1: black;
+    --color2: gray;
+    --color3: silver;
+    --color4: yellow;
+    --color5: lime;
+    --colorLogo: gray;
+    --font1: Arial, Helvetica;
+    --spaceIn: 10px;
+    --spaceOut: 30px;
+    --textSize: 10pt; 
+    --btnTextSize: 8pt; 
+    --transition: .5s;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* elements (tags) */
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--color0);
+    font-family: var(--font1);
+    font-size: var(--textSize);
+}
+header, footer {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color1);
+    background-color: var(--colorLogo);
+    padding: var(--spaceIn) 0;
+   
+}
+header img {
+    height: var(--spaceOut);
+    padding: 0 var(--spaceIn);
+    cursor: pointer;
+
+}
+footer {
+    flex-direction: column;
+}
+footer a {
+    color: var(--color0)
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+main h2 {
+    color: var(--colorLogo);
+    padding-bottom: var(--spaceIn);
+}
+.menu {
+    width: 100px;
+    background-color: var(--colorLogo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: display 2s ease-in-out, width 1s linear;
+}
+.menu a {
+    color: var(--color0);
+    padding: var(--spaceIn);
+}
+.menu a:hover {
+    color: var(--color4);
+}
+input {
+    width: 200px;
+    padding: 5px;
+    border-radius: var(--spaceOut);
+    background-color: var(--color3);
+    border: 2px solid var(--color1);
+
+}
+a {
+    padding: 0 10px;
+    color: var(--color2);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* classes */
+.content {
+    width: 100%;
+    margin: var(--spaceOut);
+}
+
+.btnSearch {
+    padding: 7px;
+    color: var(--color1);
+    border: none;
+    border-radius: var(--spaceOut);
+    background-color: var(--color0);
+    font-size: var(--btnTextSize);
+    transition: var(--transition);
+    text-align: center;
+}
+
+/* pseudo-classes */
+a:hover, a:active {
+    color: var(--colorLogo);
+}
+a:active {
+    color: var(--color5);
+}
+a[href="index.html"] {
+    color: var(--color0);
+    font-size: 18pt;
+    transition: var(--transition);
+}
+a[href="index.html"]:hover {
+    color: var(--color5);
+    transition: var(--transition);
+}
+input:focus {
+    padding: var(--spaceIn);
+    border: none;
+    outline-style: none;
+    background-color: var(--color0);
+    transition: var(--transition);
+}
+.btnSearch:hover {
+    color: var(--color0);
+    background-color: var(--color1);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1.5px solid var(--color0);
+}
+.btnSearch:active {
+    background-color: var(--color2);
+}
+
+/* pseudo-elements 
+   pode ser acrescentado às pseudo classes, como em:
+   a[href="index.html"]:has(+div):hover {
+                        ---------
+   + seguido de                          (<h2></h2><p></p>)
+   > possui       (como elemento aninhado <h2>><p></p></h2)
+*/
+/*
+h2:has(+p) {
+    color: var(--colorLogo);
+    margin-top: var(--spaceOut);
+}
+
+p:not(.prodPreco) {
+    color: var(--colorLogo);
+}
+p::before {
+    content: ". ";
+}
+p::after {
+    content: " .";
+}
+*/
+::placeholder {
+    color: var(--color3);
+    padding-left: var(--spaceIn);
+};
+
+/* Atividade */
+
+.category {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.categoryName {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color3);
+    transition: var(--transition);
+}
+.selectedCategory {
+    color: var(--colorLogo);
+    transition: var(--transition);
+}
+.prodDesc {
+    color: var(--color1);
+}
+.products {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+
+.product {
+    width: 100%;
+    padding-top: var(--spaceIn);
+    display: flex;
+}
+.product img {
+    height: var(--spaceOut);
+    margin-right: var(--spaceIn);
+}
+.prodName {
+    color: var(--colorLogo);
+    font-weight: bold;
+}
+.prodDesc {
+    font-style: italic;
+}
+.prodBuy {
+    padding: 5px 0;
+    font-weight: bold;
+    color: var(--colorLogo);
+
+    display: flex;
+    justify-content: space-between;
+}
+.prodButton {
+    padding: 5px var(--spaceIn);
+    border: none;
+    border-radius: var(--spaceIn);
+    align-items: end;
+    color: var(--color0);
+    background-color: var(--colorLogo);
+    transition: var(--transition);
+}
+.prodButton:hover {
+    color: var(--color1);
+    background-color: var(--color3);
+    transition: var(--transition);
+}
+.prodButton:active {
+    color: var(--color1);
+    background-color: var(--color5);
+}
+
+

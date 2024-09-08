@@ -1,0 +1,20 @@
+input[type="radio"],
+input[type="checkbox"] {
+    margin-bottom: 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaceIn);
+}
+.flexInline {
+    display: flex;
+    gap: var(--spaceIn);
+    align-items: center;
+}
+.flexRowJustify {
+    justify-content: space-between;
+}
+.cw120 {
+    width: 120px;
+}

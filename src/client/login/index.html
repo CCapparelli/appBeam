@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../shared/css/root.css">
+    <link rel="stylesheet" href="../../shared/css/forms.css">
+    <link rel="shortcut icon" href="../../shared/img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="../../shared/img/logo.png" alt="logo" title="CIA">
+
+        <div class="search">
+            <input type="text" name="" id="" placeholder="Digite o nome de um produto">
+            <button type="button" class="btnSearch">Pesquisar...</button>
+        </div>
+    
+        <img id="btnMenu" src="../../shared/img/menu.png" alt="logo" title="Menu">
+    </header>
+
+
+    <main>
+        <section class="content">
+            <h2>Login</h2>
+            <form id="loginForm" action="#" method="post">
+                <label for="userName">Nome do usuário *</label>
+                <input id="userName" type="text" required> 
+    
+                <label for="userMail">E-mail *</label>
+                <input id="userMail" type="email" placeholder="usuario@.sistemafibra.org.br" required>
+    
+                <div class="flexInline">
+                    <label for="termos">Lembrar me</label>
+                    <input id="termos" type="checkbox" name="">
+                </div>
+    
+                <div class="flexInline flexRowJustify">
+                    <button type="submit"> ENTRAR </button>
+                    <a href="signup.html">Cadastrar...</a>
+                </div>
+            </form>
+        </section>
+        <aside id="menu" class="menu">
+            <a href="../../../index.html">HOME</a>
+        </aside>
+    </main>
+    
+    <footer>
+        teste
+    </footer>
+</body>
+<script src="../../shared/js/index.js"></script>
+<script src="js/login.js"></script>
+</html>
