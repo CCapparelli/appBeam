@@ -5,7 +5,32 @@
     --color3: silver;
     --color4: yellow;
     --color5: lime;
-    --colorLogo: cornflowerblue;
+    --color6: cyan;
+    --color7: red;
+    --colorLogo: cornflowerblue; /* to be Deprecated */
+    --cPrimary: #0066CC;
+    --cComplem: #CC6600;
+    --cSplit1: #CC0000;
+    --cSplit2: #CCCC00;
+    --cMono1: #0052A3;
+    --cMono2: #007AF5;
+    --cAnalog1: #0000CC;
+    --cAnalog2: #00CCCC;
+    --cTriad1: #CC0066;
+    --cTriad2: #66CC00;
+    --cSquare1: #CC00CC;
+    --cSquare2: #CC6600;
+    --cSquare3: #00CC00;
+    --cGray1: rgb(248, 249, 250); 
+    --cGray2: rgb(233, 236, 239); 
+    --cGray3: rgb(222, 226, 230); 
+    --cGray4: rgb(206, 212, 218); 
+    --cGray5: rgb(173, 181, 189); 
+    --cGray6: rgb(108, 117, 125); 
+    --cGray7: rgb(73, 80, 87); 
+    --cGray8: rgb(52, 58, 64); 
+    --cGray9: rgb(33, 37, 41); 
+
     --font1: Arial, Helvetica;
     --spaceIn: 10px;
     --spaceOut: 30px;
@@ -28,7 +53,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: var(--color0);
+    background-color: var(--cGray3);
     font-family: var(--font1);
     font-size: var(--textSize);
 }
@@ -40,7 +65,7 @@ header, footer {
     align-items: center;
 
     color: var(--color1);
-    background-color: var(--colorLogo);
+    background-color: var(--cPrimary);
     padding: var(--spaceIn) 0;
    
 }
@@ -59,35 +84,45 @@ main {
     height: 100vh;
 }
 main h2 {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
     padding-bottom: var(--spaceIn);
 }
 .menu {
     width: 100px;
-    background-color: var(--colorLogo);
+    background-color: var(--cPrimary);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: display 2s ease-in-out, width 1s linear;
 }
 .menu a {
-    color: var(--color0);
+    color: var(--cGray1);
     padding: var(--spaceIn);
 }
 .menu a:hover {
-    color: var(--color4);
+    color: var(--cSplit2);
 }
 input {
-    width: 200px;
+    width: 100%;;
     padding: 5px;
     border-radius: var(--spaceOut);
-    background-color: var(--color3);
-    border: 2px solid var(--color1);
-
+    border: 0;
+}
+.search {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: var(--spaceIn)
+}
+.btnSearch {
+    border-radius: var(--spaceOut);
+    margin:0;
+    padding: 5px;
+    transition: var(--transition);
 }
 a {
     padding: 0 10px;
-    color: var(--color2);
+    color: var(--cGray3);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -98,49 +133,37 @@ a {
     margin: var(--spaceOut);
 }
 
-.btnSearch {
-    padding: 7px;
-    color: var(--color1);
-    border: none;
-    border-radius: var(--spaceOut);
-    background-color: var(--color0);
-    font-size: var(--btnTextSize);
-    transition: var(--transition);
-    text-align: center;
-}
-
 /* pseudo-classes */
 a:hover, a:active {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
 }
 a:active {
-    color: var(--color5);
+    color: var(--cAnalog2);
 }
 a[href="index.html"] {
-    color: var(--color0);
+    color: var(--cGray3);
     font-size: 18pt;
     transition: var(--transition);
 }
 a[href="index.html"]:hover {
-    color: var(--color5);
+    color: var(--cAnalog2);
     transition: var(--transition);
 }
 input:focus {
     padding: var(--spaceIn);
     border: none;
     outline-style: none;
-    background-color: var(--color0);
+    background-color: var(--cGray3);
     transition: var(--transition);
 }
 .btnSearch:hover {
-    color: var(--color0);
+    color: var(--cGray3);
     background-color: var(--color1);
     cursor: pointer;
     transition: var(--transition);
-    border: 1.5px solid var(--color0);
 }
 .btnSearch:active {
-    background-color: var(--color2);
+    background-color: var(----cGray7);
 }
 
 /* pseudo-elements 
@@ -152,12 +175,12 @@ input:focus {
 */
 /*
 h2:has(+p) {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
     margin-top: var(--spaceOut);
 }
 
 p:not(.prodPreco) {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
 }
 p::before {
     content: ". ";
@@ -167,7 +190,7 @@ p::after {
 }
 */
 ::placeholder {
-    color: var(--color3);
+    color: var(----cGray5);
     padding-left: var(--spaceIn);
 };
 
@@ -184,11 +207,12 @@ p::after {
     font-size: large;
     font-weight: bold;
     cursor: pointer;
-    color: var(--color3);
+    color: var(--cGray5);
     transition: var(--transition);
 }
+/* esses saem... */
 .selectedCategory {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
     transition: var(--transition);
 }
 .prodDesc {
@@ -211,7 +235,7 @@ p::after {
     margin-right: var(--spaceIn);
 }
 .prodName {
-    color: var(--colorLogo);
+    color: var(--cPrimary);
     font-weight: bold;
 }
 .prodDesc {
@@ -220,28 +244,18 @@ p::after {
 .prodBuy {
     padding: 5px 0;
     font-weight: bold;
-    color: var(--colorLogo);
+    color: var(--cPrimary);
 
     display: flex;
     justify-content: space-between;
 }
-.prodButton {
-    padding: 5px var(--spaceIn);
-    border: none;
-    border-radius: var(--spaceIn);
-    align-items: end;
-    color: var(--color0);
-    background-color: var(--colorLogo);
-    transition: var(--transition);
-}
-.prodButton:hover {
-    color: var(--color1);
-    background-color: var(--color3);
-    transition: var(--transition);
-}
 .prodButton:active {
     color: var(--color1);
-    background-color: var(--color5);
+    background-color: var(--cAnalog2);
+}
+.copyright {
+    color: var(--cGray3);
+    font-weight: bold;
 }
 
 

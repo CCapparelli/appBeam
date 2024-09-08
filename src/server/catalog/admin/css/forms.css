@@ -1,35 +1,37 @@
-.catNameInput {
-    margin:0;
-    padding: 0;
+.table {
     width: 100%;
-    border: none;
-    border-radius: 0;
-     font-weight: bold;
-    font-size: 12pt;
+    margin-bottom: var(--spaceOut);   
+    background-color: var(--cGray6);
+    border-radius: 10px;
+    padding: var(--spaceIn);
 }
+.listRow {
+    background-color: var(--cGray6);
+    margin-top: var(--spaceOut); 
+}
+.itemRow {
+    margin: 5px;
+}
+
 .update, .create, .delete {
     width: 24px;
     cursor: pointer;
     text-align: center;
 }
-.categoryRow {
-    background-color: var(--color3);
+.listName {
+    width: 100%;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: var(--cGray6);
 }
-.catName, .prodName, .prodDesc, .prodPrice {
-    padding: 5px;
-}
-.prodName, .prodDesc, .prodPrice  {
+.itemName, .itemDesc, .itemPrice  {
     padding-top: 5px;
     border: 0;
 }
-.prodName {
-    width: 70px;
+.itemName {
+    padding-left: var(--spaceIn); 
+    background-color: var(--cGray6);
 }
-.prodPrice {
+.itemPrice {
     width: 50px;
-}
-.table {
-    width: 100%;
-    margin-bottom: var(--spaceOut);
-    border: 0;
 }
