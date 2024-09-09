@@ -76,6 +76,7 @@ header img {
 
 }
 footer {
+    color: var(--cSplit2);
     flex-direction: column;
 }
 main {
@@ -87,26 +88,29 @@ main h2 {
     color: var(--cPrimary);
     padding-bottom: var(--spaceIn);
 }
+aside {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .menu {
-    width: 100px;
+    width: 120px;
     background-color: var(--cPrimary);
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: display 2s ease-in-out, width 1s linear;
 }
-.menu a {
-    color: var(--cGray1);
+.menu div a {
+    color: var(--color0);
     padding: var(--spaceIn);
+    font-size: 10pt;
+    transition: var(--transition);
 }
-.menu a:hover {
-    color: var(--cSplit2);
-}
-input {
-    width: 100%;;
-    padding: 5px;
-    border-radius: var(--spaceOut);
-    border: 0;
+.menu div a:hover {
+    color: var(--color6);
+    font-size: 12pt;
+    transition: var(--transition);
 }
 .search {
     width: 80%;
@@ -126,14 +130,6 @@ a {
     text-decoration: none;
     transition: var(--transition);
 }
-
-/* classes */
-.content {
-    width: 100%;
-    margin: var(--spaceOut);
-}
-
-/* pseudo-classes */
 a:hover, a:active {
     color: var(--cPrimary);
 }
@@ -149,13 +145,13 @@ a[href="index.html"]:hover {
     color: var(--cAnalog2);
     transition: var(--transition);
 }
-input:focus {
-    padding: var(--spaceIn);
-    border: none;
-    outline-style: none;
-    background-color: var(--cGray3);
-    transition: var(--transition);
+
+/* classes */
+.content {
+    width: 100%;
+    margin: var(--spaceOut);
 }
+
 .btnSearch:hover {
     color: var(--cGray3);
     background-color: var(--color1);
@@ -253,9 +249,8 @@ p::after {
     color: var(--color1);
     background-color: var(--cAnalog2);
 }
-.copyright {
-    color: var(--cGray3);
-    font-weight: bold;
+.copyright .author {
+    color: var(--color0);
 }
 
 
