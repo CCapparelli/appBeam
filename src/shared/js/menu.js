@@ -1,9 +1,12 @@
-document.getElementById("btnMenu").addEventListener("click", toogleMenu);
+
+document.getElementById("btnMenu").addEventListener("click", toggleMenu);
 document.getElementById("menu").style.display = "none";
 
-function toogleMenu() {
+function toggleMenu() {
     var x = document.getElementById("menu");
-    x.style.transition = 'display 2s ease-in';
-    x.style.display = (x.style.display === "flex") 
-                    ? "none" : "flex";
+    if (x.style.display === 'flex') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'flex';
+    }
 }

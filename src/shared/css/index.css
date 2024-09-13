@@ -1,0 +1,120 @@
+/* classes */
+
+.search {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: var(--spaceIn)
+}
+.btnSearch {
+    border-radius: var(--spaceOut);
+    margin:0;
+    padding: 5px;
+    transition: var(--transition);
+}
+.content {
+    width: 100%;
+    margin: var(--spaceOut);
+}
+
+.btnSearch:hover {
+    color: var(--cGray3);
+    background-color: var(--color1);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btnSearch:active {
+    background-color: var(----cGray7);
+}
+
+/* pseudo-elements 
+   pode ser acrescentado às pseudo classes, como em:
+   a[href="index.html"]:has(+div):hover {
+                        ---------
+   + seguido de                          (<h2></h2><p></p>)
+   > possui       (como elemento aninhado <h2>><p></p></h2)
+*/
+/*
+h2:has(+p) {
+    color: var(--cPrimary);
+    margin-top: var(--spaceOut);
+}
+
+p:not(.prodPreco) {
+    color: var(--cPrimary);
+}
+p::before {
+    content: ". ";
+}
+p::after {
+    content: " .";
+}
+*/
+::placeholder {
+    color: var(----cGray5);
+    padding-left: var(--spaceIn);
+};
+
+/* Atividade */
+
+.category {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.categoryName {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--cGray5);
+    transition: var(--transition);
+}
+/* esses saem... */
+.selectedCategory {
+    color: var(--cPrimary);
+    transition: var(--transition);
+}
+.prodDesc {
+    color: var(--color1);
+}
+.products {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+
+.product {
+    width: 100%;
+    padding-top: var(--spaceIn);
+    display: flex;
+}
+.product img {
+    height: var(--spaceOut);
+    margin-right: var(--spaceIn);
+}
+.prodName {
+    color: var(--cPrimary);
+    font-weight: bold;
+}
+.prodDesc {
+    font-style: italic;
+}
+.prodBuy {
+    padding: 5px 0;
+    font-weight: bold;
+    color: var(--cPrimary);
+
+    display: flex;
+    justify-content: space-between;
+}
+.prodButton:active {
+    color: var(--color1);
+    background-color: var(--cAnalog2);
+}
+.copyright .author {
+    color: var(--color0);
+}
+

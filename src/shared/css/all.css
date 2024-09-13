@@ -1,0 +1,156 @@
+:root {
+    --color0: white;
+    --color1: black;
+    --color2: gray;
+    --color3: silver;
+    --color4: yellow;
+    --color5: lime;
+    --color6: cyan;
+    --color7: red;
+    --colorLogo: cornflowerblue; /* to be Deprecated */
+    --cPrimary: #0066CC;
+    --cComplem: #CC6600;
+    --cSplit1: #CC0000;
+    --cSplit2: #CCCC00;
+    --cMono1: #0052A3;
+    --cMono2: #007AF5;
+    --cAnalog1: #0000CC;
+    --cAnalog2: #00CCCC;
+    --cTriad1: #CC0066;
+    --cTriad2: #66CC00;
+    --cSquare1: #CC00CC;
+    --cSquare2: #CC6600;
+    --cSquare3: #00CC00;
+    --cGray1: rgb(248, 249, 250); 
+    --cGray2: rgb(233, 236, 239); 
+    --cGray3: rgb(222, 226, 230); 
+    --cGray4: rgb(206, 212, 218); 
+    --cGray5: rgb(173, 181, 189); 
+    --cGray6: rgb(108, 117, 125); 
+    --cGray7: rgb(73, 80, 87); 
+    --cGray8: rgb(52, 58, 64); 
+    --cGray9: rgb(33, 37, 41); 
+
+    --font1: Arial, Helvetica;
+    --spaceIn: 10px;
+    --spaceOut: 30px;
+    --textSize: 10pt; 
+    --btnTextSize: 8pt; 
+    --transition: .5s;
+
+    --animate-duration: 2s;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--cGray3);
+    font-family: var(--font1);
+    font-size: var(--textSize);
+}
+header, footer {
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--color1);
+    background-color: var(--cPrimary);
+    padding: var(--spaceIn) 0;
+   
+}
+header img {
+    height: var(--spaceOut);
+    padding: 0 var(--spaceIn);
+    cursor: pointer;
+
+}
+aside {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cPrimary);
+}
+nav ul {
+    width: 100px;
+    background-color: var(--cPrimary);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style: none;
+}
+nav ul li {
+    padding: var(--spaceIn) 0;
+
+}
+nav ul li a:hover {
+    color: var(--cSplit2);
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+footer {
+    color: var(--cSplit2);
+    flex-direction: column;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+main h2 {
+    color: var(--cPrimary);
+    padding-bottom: var(--spaceIn);
+}
+
+
+
+a {
+    padding: 0 10px;
+    color: var(--cGray3);
+    text-decoration: none;
+    transition: var(--transition);
+}
+a:hover, a:active {
+    color: var(--cPrimary);
+}
+a:active {
+    color: var(--cAnalog2);
+}
+a[href="index.html"] {
+    color: var(--cGray3);
+    font-size: 18pt;
+    transition: var(--transition);
+}
+a[href="index.html"]:hover {
+    color: var(--cAnalog2);
+    transition: var(--transition);
+}
+input {
+    width: 100%;;
+    padding: 5px;
+    border: none;
+    border-radius: var(--spaceOut);
+    font-size: var(--textSize);
+    background-color: var(--cGray3);
+    transition: var(--transition);
+}
+input:hover, input:focus {
+    font-size: 12pt;
+    padding: var(--spaceIn);
+    border: 1px solid var(--cGray9);
+    outline-style: none;
+    transition: var(--transition);
+}
+
+
